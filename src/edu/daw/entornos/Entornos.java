@@ -33,7 +33,7 @@ public class Entornos {
      * <pre>
      * Entornos.saludar();
      * </pre>
-     dakskdw
+     *
      * Este método no recibe parámetros y no devuelve ningún valor.
      */
     public static void saludar() {
