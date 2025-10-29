@@ -29,6 +29,7 @@ public class Entornos {
 
         int area = AreaCuadrado(3);
         System.out.println("El área del cuadrado de lado 3 es: " + area);
+
         String saludo = SaludoPersonalizado("Daniel");
         System.out.println(saludo);
 
