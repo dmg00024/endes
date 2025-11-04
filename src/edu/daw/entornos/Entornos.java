@@ -1,5 +1,7 @@
 package edu.daw.entornos;
 
+import  java.util.Scanner;
+
 /**
  * Clase de ejemplo que muestra funciones básicas en Java:
  * - un método sin parámetros ni valor de retorno (saludar)
@@ -16,6 +18,11 @@ public class Entornos {
      * @param args argumentos de línea de comandos (no se usan)
      */
     public static void main(String[] args) {
+
+        // Crear el objeto Scanner para leer datos desde la consola
+
+        Scanner scanner = new Scanner(System.in);
+
         saludar();
 
         int resultado = sumar(5, 7);
@@ -46,6 +53,28 @@ public class Entornos {
         } else {
             System.out.println("El número 7 es par.");
         }
+
+        String Factorial = calcularFactorial(3);
+        System.out.println(Factorial);
+
+        // Solicitar el radio al usuario
+
+        System.out.print("Introduce el radio del círculo: ");
+        double radio = scanner.nextDouble();
+
+        double areaCirculo = calcularAreaCirculo(radio);
+
+        System.out.printf("El área del círculo con radio %.2f es %.2f\n", radio, areaCirculo);
+
+        // Cerrar el scanner
+        scanner.close();
+
+
+
+
+
+
+
     }
 
     /**
@@ -93,14 +122,15 @@ public class Entornos {
 
     /**
      * Calcula el doble de un número real
-     * x es el número del cual obtendremos el doble
-     * @return el doble del número seleccionado*/
+     * @param x es el número del cual obtendremos el doble
+     * @return el doble del número seleccionado
+     * */
 
     public static int ObtenerDoble(int x) { return x * 2 ;}
 
     /**
      * Calcula el area de un cuadrado
-     * l es la longitud del lado del cuadrado
+     * @param l es la longitud del lado del cuadrado
      * @return el cuadrado del lado
      * */
 
@@ -108,22 +138,50 @@ public class Entornos {
 
     /**
      * Mostrar un saludo personalizado
-     * nombre es el nombre de la persona a saludar
+     * @param nombre es el nombre de la persona a saludar
      * @return un saludo dirigido al nombre seleccionado
      */
     public static String SaludoPersonalizado(String nombre) { return "Hola " + nombre + ", bienvenido a mi programa." ;}
 
     /**
      * Comprobar si un número es par
-     * n es el número a comprobar
-     * @return true si el número es par, false si es impar
+     * @param n es el número a comprobar
+     * @return {@code true} si el número es par, {@code false} si es impar
      */
     public static boolean EsPar(int n) { return n % 2 == 0 ;}
 
     /**
      * Comprobar si un número es impar
-     * n es el número a comprobar
-     * @return true si el número es impar, false si es par
+     * @param n es el número a comprobar
+     * @return {@code true} si el número es impar, {@code false} si es par
      */
     public static boolean esImpar(int n) { return n % 2 != 0 ;}
+
+    /**
+     * Calcula el factorial de un número entero no negativo.
+     * @param n número del cual se desea calcular el factorial
+     * @return una cadena con el resultado del factorial o un mensaje de error si el número es negativo
+     */
+
+    public static String calcularFactorial(int n) {
+            if (n < 0) {
+                return "El factorial no está definido para números negativos.";
+            }
+            int factorial = 1;
+            for (int i = 1; i <= n; i++) {
+                factorial *= i;
+            }
+            return "El factorial de " + n + " es: " + factorial;
+    }
+
+    /**
+     * Calcula el área de un círculo dado su radio.
+     * @param radio el radio del círculo
+     * @return el área calculada usando la fórmula {@code PI * radio^2}
+     */
+
+    public static double calcularAreaCirculo(double radio) {
+            return Math.PI * Math.pow(radio, 2);
+    }
+
 }
