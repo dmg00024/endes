@@ -66,12 +66,22 @@ public class Entornos {
 
         System.out.printf("El área del círculo con radio %.2f es %.2f\n", radio, areaCirculo);
 
+        // Solicitar números a sumar al usuario
+
+        System.out.print("Introduce el primero número: ");
+        double x = scanner.nextDouble();
+        System.out.print("Introduce el segundo numero: ");
+        double y = scanner.nextDouble();
+        double SumaDeDos =  CalculoSuma(x, y);
+        System.out.println("La suma de " + x + " y " + y + " es igual a: " + SumaDeDos);
+
+        //Solicitar el número al usuario a partir del cual se sumaran los siguientes
+        System.out.print("Introduce el número que quieras sumar : ");
+        int num = scanner.nextInt();
+        int sumaconsecutiva = Sumar10Siguientes(num);
+        System.out.println("La suma de " + num + " y sus nueve consecutivos números es: " + sumaconsecutiva);
         // Cerrar el scanner
         scanner.close();
-
-
-
-
 
 
 
@@ -184,4 +194,27 @@ public class Entornos {
             return Math.PI * Math.pow(radio, 2);
     }
 
+    /**
+     * Calcular la suma de dos numeros 
+     * @param x es el primer número a sumar
+     * @param y es el segundo número a sumar
+     * @return la suma de {@code x} y {@code y}
+     */
+    public static double CalculoSuma(double x, double y) {
+        return x + y;
+    }
+
+    /**
+     * Calcula la suma de los 10 números enteros consecutivos comenzando desde el número dado.
+     * @param num El número entero desde el cual comienza la suma.
+     * @return La suma de los 10 números consecutivos empezando desde {@code num}.
+     */
+
+    public static int Sumar10Siguientes (int num) {
+        int suma = 0;
+        for (int i = 0; i < 10; i++) {
+            suma += num + i;
+        }
+        return suma;
+    }
 }
