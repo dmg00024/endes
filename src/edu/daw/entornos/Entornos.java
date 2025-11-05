@@ -10,6 +10,7 @@ package edu.daw.entornos;
         int celsius = 34;
         int fahrenheit = 32;
         String saludo = "javi";
+        String textomayus = "hola buenas que tal estas";
 
         sumar(a, b);
         multiplicar(a, b);
@@ -17,17 +18,18 @@ package edu.daw.entornos;
         grados(celsius, fahrenheit);
 
         System.out.println("Hola, " + saludo + "! Bienvenido.");
+
+        textoMayusculas(textomayus);
+
     }
 
 //BLOQUE 1
-    public static void sumar(int a, int b){
-        System.out.println("El resultado de la suma es:");
-        System.out.println(a + b);
+    public static int sumar(int a, int b){
+        return  a + b;
     }
 
-    public static void multiplicar(int a, int b){
-        System.out.println("El resultado de la multiplicacion es:");
-        System.out.println(a * b);
+    public static int multiplicar(int a, int b){
+      return  a * b;
     }
 
     public static void area (int lado1, int lado2){
@@ -40,5 +42,9 @@ package edu.daw.entornos;
         System.out.println(celsius + fahrenheit);
     }
 
+    public static void textoMayusculas(String textomayus){
+        System.out.println("Texto en mayúsculas:");
+        System.out.println(textomayus.toUpperCase());
+    }
 
 }
