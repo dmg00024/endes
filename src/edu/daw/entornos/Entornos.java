@@ -19,6 +19,7 @@ public class Entornos {
     public static void main(String[] args) {
         saludar();
 
+        
         int resultado = sumar(5, 7);
         System.out.println("La suma de 5 y 7 es: " + resultado);
 
