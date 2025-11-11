@@ -78,8 +78,30 @@ public class Entornos {
         //Solicitar el número al usuario a partir del cual se sumaran los siguientes
         System.out.print("Introduce el número que quieras sumar : ");
         int num = scanner.nextInt();
+
+        //Llamamos a la función.
+
         int sumaconsecutiva = Sumar10Siguientes(num);
+
+        //Devlvemos la suma al usuario.
+
         System.out.println("La suma de " + num + " y sus nueve consecutivos números es: " + sumaconsecutiva);
+
+        //Solicitar al usuario los números a traves de los cuales obtendremos el mayor.
+
+        System.out.print("Introduce el primero número a comparar: ");
+        int num1 = scanner.nextInt();
+        System.out.print("Introduce el segundo numero a comparar: ");
+        int num2 = scanner.nextInt();
+
+        //Llamamos a la función.
+
+        int mayor = determinarMayor(num1, num2);
+
+        //Devolvemos el mayor al usuario.
+
+        System.out.println("EL mayor de los números elegidos es: " + mayor);
+
         // Cerrar el scanner
         scanner.close();
 
@@ -195,7 +217,7 @@ public class Entornos {
     }
 
     /**
-     * Calcular la suma de dos numeros 
+     * Calcular la suma de dos numeros
      * @param x es el primer número a sumar
      * @param y es el segundo número a sumar
      * @return la suma de {@code x} y {@code y}
@@ -217,4 +239,16 @@ public class Entornos {
         }
         return suma;
     }
+
+    /**
+     * Determina cuál de dos números es mayor
+     * @param num1 Primer número
+     * @param num2 Segundo número
+     * @return El mayor de los dos números (o cualquiera si son iguales)
+     */
+    public static int determinarMayor(int num1, int num2) {
+        // Son iguales, devuelve cualquiera
+        return Math.max(num1, num2);
+    }
+
 }
