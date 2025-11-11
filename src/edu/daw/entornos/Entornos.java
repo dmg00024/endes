@@ -20,26 +20,22 @@ public class Entornos {
         // Ejemplo 0: Saludo simple
         saludar();
 
-        // 1️⃣ Calcular la suma de dos números
+        // Bloque 1
         int suma = sumar(7, 8);
         System.out.println("La suma de 7 y 8 es: " + suma);
 
-        // 2️⃣ Obtener el doble de un número
         int numero = 6;
         int dobleNumero = doble(numero);
         System.out.println("El doble de " + numero + " es: " + dobleNumero);
 
-        // 3️⃣ Calcular el área de un cuadrado
         double lado = 5.0;
         double area = areaCuadrado(lado);
         System.out.println("El área de un cuadrado de lado " + lado + " es: " + area);
 
-        // 4️⃣ Convertir grados Celsius a Fahrenheit
         double celsius = 25.0;
         double fahrenheit = celsiusAFahrenheit(celsius);
         System.out.println(celsius + "°C equivalen a " + fahrenheit + "°F");
 
-        // 5️⃣ Sumar los primeros 10 números naturales
         int suma10 = sumaPrimeros10();
         System.out.println("La suma de los primeros 10 números naturales es: " + suma10);
 
@@ -63,6 +59,13 @@ public class Entornos {
         System.out.println("Vocales: " + contarVocales("murciélago"));
         repetirMensaje("Hola", 3);
         mostrarMultiplosDeTres(20);
+
+        // Bloque 5
+        System.out.println("Número aleatorio (1-10): " + aleatorio1a10());
+        System.out.println("2024 es bisiesto: " + esBisiesto(2024));
+        System.out.println("Día 5: " + diaDeLaSemana(5));
+        System.out.println("Tirada de dado: " + tiradaDado());
+        System.out.println("Media de 5, 8, 10: " + mediaDeTres(5.0, 8.0, 10.0));
     }
 
     /**
@@ -124,10 +127,6 @@ public class Entornos {
         return suma;
     }
 
-    // ─────────────────────────────
-    // BLOQUE 2 – TEXTO Y CADENAS
-    // ─────────────────────────────
-
     /**
      * Devuelve un saludo personalizado.
      *
@@ -178,10 +177,6 @@ public class Entornos {
     public static boolean contieneA(String texto) {
         return texto.contains("a");
     }
-
-    // ─────────────────────────────
-    // BLOQUE 3 – CONDICIONALES
-    // ─────────────────────────────
 
     /**
      * Devuelve el mayor de dos números.
@@ -240,10 +235,6 @@ public class Entornos {
         return edad >= 18;
     }
 
-    // ─────────────────────────────
-    // BLOQUE 4 – BUCLES
-    // ─────────────────────────────
-
     /**
      * Suma todos los números del 1 al 100.
      *
@@ -300,5 +291,68 @@ public class Entornos {
      */
     public static void mostrarMultiplosDeTres(int limite) {
         for (int i = 3; i <= limite; i += 3) System.out.println(i);
+    }
+
+    // ─────────────────────────────
+    // BLOQUE 5 – PARA AVANZAR
+    // ─────────────────────────────
+
+    /**
+     * Genera un número aleatorio entre 1 y 10. [cite: 91]
+     *
+     * @return número aleatorio (int)
+     */
+    public static int aleatorio1a10() {
+        return (int) (Math.random() * 10) + 1;
+    }
+
+    /**
+     * Comprueba si un año es bisiesto. [cite: 92]
+     *
+     * @param anio año a comprobar
+     * @return {@code true} si es bisiesto
+     */
+    public static boolean esBisiesto(int anio) {
+        return (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0);
+    }
+
+    /**
+     * Devuelve el día de la semana según un número. [cite: 93]
+     *
+     * @param dia número del 1 (Lunes) al 7 (Domingo)
+     * @return nombre del día o "Día inválido"
+     */
+    public static String diaDeLaSemana(int dia) {
+        switch (dia) {
+            case 1: return "Lunes";
+            case 2: return "Martes";
+            case 3: return "Miércoles";
+            case 4: return "Jueves";
+            case 5: return "Viernes";
+            case 6: return "Sábado";
+            case 7: return "Domingo";
+            default: return "Día inválido";
+        }
+    }
+
+    /**
+     * Simula una tirada de dado (1-6). [cite: 94]
+     *
+     * @return número aleatorio entre 1 y 6
+     */
+    public static int tiradaDado() {
+        return (int) (Math.random() * 6) + 1;
+    }
+
+    /**
+     * Calcula la media de tres números. [cite: 95]
+     *
+     * @param a primer número
+     * @param b segundo número
+     * @param c tercer número
+     * @return la media aritmética
+     */
+    public static double mediaDeTres(double a, double b, double c) {
+        return (a + b + c) / 3.0;
     }
 }
