@@ -1,3 +1,5 @@
+package edu.daw.entornos;
+
 import java.util.Scanner;
 
 public class Entornos {
@@ -13,7 +15,7 @@ public class Entornos {
 
 
         double suma = num1 + num2;
-
+m
 
         System.out.println("La suma es: " + suma);
 
