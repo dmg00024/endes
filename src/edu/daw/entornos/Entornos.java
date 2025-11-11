@@ -23,6 +23,8 @@ public class Entornos {
 
         Scanner scanner = new Scanner(System.in);
 
+        //Funciones profesor.
+
         saludar();
 
         int resultado = sumar(5, 7);
@@ -30,6 +32,8 @@ public class Entornos {
 
         double media = calcularPromedio3(8.5, 6.0, 9.0);
         System.out.println("La media es: " + media);
+
+        //Funciones alumno.
 
         int doble_numero = ObtenerDoble(7);
         System.out.println("El doble de 7 es: " + doble_numero);
@@ -102,6 +106,22 @@ public class Entornos {
 
         System.out.println("EL mayor de los números elegidos es: " + mayor);
 
+        //Solicitar al usuario su edad en años
+
+        System.out.print("Indique su edad en años: ");
+        int edad = scanner.nextInt();
+
+        //Llamamos a la función.
+        boolean voto = puedeVotar(edad);
+
+        //Devolvemos al usuario si puede votar o no
+
+        if (voto) {
+            System.out.println("El usuario es mayor, por lo tanto, puede votar.");
+        } else {
+            System.out.println("El usuario no es mayor de edad, por consecuencia, no puede votar.");
+
+        }
         // Cerrar el scanner
         scanner.close();
 
@@ -247,8 +267,16 @@ public class Entornos {
      * @return El mayor de los dos números (o cualquiera si son iguales)
      */
     public static int determinarMayor(int num1, int num2) {
-        // Son iguales, devuelve cualquiera
+        // Sí son iguales, devuelve cualquiera
         return Math.max(num1, num2);
     }
 
+    /**
+     * Comprueba si una persona puede votar según su edad
+     * @param edad Edad de la persona
+     * @return true si puede votar (edad >= 18), false en caso contrario
+     */
+    public static boolean puedeVotar(int edad) {
+        return edad >= 18;
+    }
 }
