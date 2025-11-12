@@ -1,7 +1,6 @@
 package edu.daw.entornos;
 
-//Incluida la función Sumar 2 numeros
-    public class Entornos {
+public class Entornos {
     public static void main(String[] args) {
         int a = 5;
         int b = 2;
@@ -11,40 +10,52 @@ package edu.daw.entornos;
         int fahrenheit = 32;
         String saludo = "javi";
         String textomayus = "hola buenas que tal estas";
+        String frase1 = "Hola, ¿cómo estás?";
+        String frase2 = "Estoy bien, gracias.";
 
-        sumar(a, b);
-        multiplicar(a, b);
-        area(lado1, lado2);
-        grados(celsius, fahrenheit);
+        int resultadoSuma = sumar(a, b);
+        int resultadoMultiplicacion = multiplicar(a, b);
+        int resultadoArea = area(lado1, lado2);
+        int resultadoGrados = grados(celsius, fahrenheit);
+        String resultadoMayusculas = textoMayusculas(textomayus);
 
         System.out.println("Hola, " + saludo + "! Bienvenido.");
-
-        textoMayusculas(textomayus);
-
+        System.out.println("La respuesta de la suma es " + resultadoSuma);
+        System.out.println("La respuesta de la multiplicación es " + resultadoMultiplicacion);
+        System.out.println("El resultado del área es: " + resultadoArea);
+        System.out.println("El resultado de celsius a Fahrenheit es: " + resultadoGrados);
+        System.out.println("Texto en mayúsculas: " + resultadoMayusculas);
+        String resultadounir = unirFrases(frase1, frase2);
+        System.out.println(resultadounir);
     }
 
-//BLOQUE 1
+
+    /**
+     * @param a
+     * @param b
+     * @return
+     */
     public static int sumar(int a, int b){
         return  a + b;
     }
 
     public static int multiplicar(int a, int b){
-      return  a * b;
+        return  a * b;
     }
 
-    public static void area (int lado1, int lado2){
-        System.out.println("El resultado del area es:");
-        System.out.println(lado1 * lado2);
+    public static int area(int lado1, int lado2){
+        return lado1 * lado2;
     }
 
-    public static void grados (int celsius, int fahrenheit){
-        System.out.println("El resultado de celsius a Fahrenheit es:");
-        System.out.println(celsius + fahrenheit);
+    public static int grados(int celsius, int fahrenheit){
+        return celsius + fahrenheit;
     }
 
-    public static void textoMayusculas(String textomayus){
-        System.out.println("Texto en mayúsculas:");
-        System.out.println(textomayus.toUpperCase());
+    public static String textoMayusculas(String textomayus){
+        return textomayus.toUpperCase();
     }
 
+    public static String unirFrases(String frase1, String frase2) {
+        return frase1 + " " + frase2;
+    }
 }
