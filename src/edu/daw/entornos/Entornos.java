@@ -6,20 +6,22 @@ public class Entornos {
         int c=2;
         int lado1=32;
         int lado2=20;
-        int celsius=30;
+        int celsius=73;
         int far=32;
         int sumaen=1+2+3+4+5+6+7+8+9+10;
-        sumar(a, b);
-        doble(a,c);
-        area(lado1, lado2);
-        grados(celsius, far);
-        enteros(sumaen);
 
+        int ressumar=sumar(a, b);
+        int resdoble=doble(a,c);
+        int resarea=area(lado1, lado2);
+        int resgrados=grados(celsius, far);
+        int resentero=enteros(sumaen);
 
-        System.out.println("El resultado de la suma es:" + (a+b));
-        System.out.println("El resultado de la doble es:" + (a*c));
-        System.out.println("El resultado de la area es:" + (lado2*lado1));
-        System.out.println("Los grados en fahrenheit:"+(celsius+far));
+        System.out.println("El resultado de la suma es:" + ressumar);
+        System.out.println("El resultado de la doble es:" + resdoble);
+        System.out.println("El resultado de la area es:" + resarea);
+        System.out.println("Los grados en fahrenheit:"+ resgrados);
+        System.out.println("La suma de los 10 primeros numeros enteros es:"+ resentero);
+
     }
     //Calcular la suma de dos números
     public static int sumar(int a, int b){
@@ -27,8 +29,8 @@ public class Entornos {
     }
 
     //Obtener el doble de un número
-    public static int doble(int b, int c){
-      return c ;
+    public static int doble(int a, int c){
+      return a*c ;
     }
 
     //Calcular el área de un cuadrado
