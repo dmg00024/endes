@@ -1,0 +1,12 @@
+diff a/src/edu/daw/entornos/Entornos.java b/src/edu/daw/entornos/Entornos.java	(rejected hunks)
+@@ -17,6 +17,10 @@
+      * @param args argumentos de línea de comandos (no se usan)
+      */
+     public static void main(String[] args) {
++
++        /**
++         *
++
+         saludar();
+ 
+         int resultado = sumar(5, 7);
