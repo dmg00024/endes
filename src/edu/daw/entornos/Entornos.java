@@ -28,6 +28,12 @@ public class Entornos {
         String nombre="Alba";
         String apellido="Casdo García";
         System.out.println("El nombre completo es: " + nombreCompleto(nombre, apellido));
+
+        int sumaNumeros = sumarNumeros(10, 20);
+        System.out.println("La suma de 10 y 20 es: " + sumaNumeros);
+
+        int dobleNumero = obtenerDoble(15);
+        System.out.println("El doble de 15 es: " + dobleNumero);    
     }
 
     /**
@@ -88,5 +94,24 @@ public class Entornos {
      */
     public static String nombreCompleto(String nombre, String apellido) {
         return nombre + " " + apellido;
+    }
+
+   /** Bloque 1 – Operaciones numéricas*/
+    /**Calcular la suma de dos números
+     * 2. Calcular la resta de dos números
+     *1. Calcular la suma de dos números
+     */
+    public static int sumarNumeros(int num1, int num2) {
+        return num1 + num2;
+    }
+
+
+/** Obtener el doble de un número
+ * 2. Calcular la resta de dos números
+1. Calcular la suma de dos números
+ */
+
+    public static int obtenerDoble(int numero) {
+        return numero * 2;
     }
 }
