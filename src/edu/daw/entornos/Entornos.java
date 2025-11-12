@@ -58,7 +58,4 @@ public class Entornos {
     public static String unirFrases(String frase1, String frase2) {
         return frase1 + " " + frase2;
     }
-
-
-    
 }
