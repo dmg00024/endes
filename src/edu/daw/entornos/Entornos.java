@@ -24,6 +24,10 @@ public class Entornos {
 
         double media = calcularPromedio3(8.5, 6.0, 9.0);
         System.out.println("La media es: " + media);
+
+        String nombre="Alba";
+        String apellido="Casdo García";
+        System.out.println("El nombre completo es: " + nombreCompleto(nombre, apellido));
     }
 
     /**
@@ -68,5 +72,21 @@ public class Entornos {
      */
     public static double calcularPromedio3(double n1, double n2, double n3) {
         return (n1 + n2 + n3) / 3;
+    }
+
+    /**
+     * Combina un nombre y un apellido en una sola cadena.
+     *
+     * @param nombre el nombre de la persona
+     * @param apellido el apellido de la persona
+     * @return una cadena que contiene el nombre completo en el formato "nombre apellido"
+     *
+     * Ejemplo:
+     * <pre>
+     * String completo = Entornos.nombreCompleto("Juan", "Pérez"); // completo == "Juan Pérez"
+     * </pre>
+     */
+    public static String nombreCompleto(String nombre, String apellido) {
+        return nombre + " " + apellido;
     }
 }
