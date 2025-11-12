@@ -122,6 +122,19 @@ public class Entornos {
             System.out.println("El usuario no es mayor de edad, por consecuencia, no puede votar.");
 
         }
+
+        //Solicitar la temperatura en grados Celsius al usuario
+
+        System.out.print("Ingrese la temperatura en Celsius: ");
+        double celsius = scanner.nextInt();
+
+        //Llamamos a la función
+
+        double fahrenheit = celsiusAFahrenheit(celsius);
+
+        // Mostramos por pantalla los grados Fahrenheit del usuario
+
+        System.out.println("Su temperatura es equivalente a: " + fahrenheit + "°F");
         // Cerrar el scanner
         scanner.close();
 
@@ -278,5 +291,15 @@ public class Entornos {
      */
     public static boolean puedeVotar(int edad) {
         return edad >= 18;
+    }
+
+    /**
+     * Convierte grados Celsius a Fahrenheit.
+     * Utiliza la fórmula: F = (C * 9/5) + 32
+     * @param celsius Temperatura en grados Celsius
+     * @return Temperatura equivalente en grados Fahrenheit
+     */
+    public static double celsiusAFahrenheit(double celsius) {
+        return (celsius * 9/5) + 32;
     }
 }
