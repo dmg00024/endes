@@ -135,6 +135,37 @@ public class Entornos {
         // Mostramos por pantalla los grados Fahrenheit del usuario
 
         System.out.println("Su temperatura es equivalente a: " + fahrenheit + "°F");
+
+        scanner.nextLine(); // para limpiar la memoria
+
+        //Solicitamos al usuario el texto que pasaremos a mayúsculas
+
+        System.out.println("Ingrese el texto a convertir: ");
+        String texto = scanner.nextLine();
+
+        //Llamamos a la funcion
+        String mayus = convertirAMayusculas(texto);
+
+        //Devolvemos al usuario su texto en mayusculas
+
+        System.out.println(mayus);
+
+        //Solicitamos al usuario la oración en la cuál buscaremos la 'a'
+
+        System.out.println("Introduzca su oración: ");
+        String oracion = scanner.nextLine();
+
+        //Llamamos a la función
+        boolean a = contieneLetraA(oracion);
+
+        //Devolvemos al usuario si su oración contiene la letra a
+
+        if (a){
+            System.out.println("Su oración contiene la letra A");
+        }else {
+            System.out.println("Su oración NO contiene la letra A");
+        }
+
         // Cerrar el scanner
         scanner.close();
 
@@ -301,5 +332,24 @@ public class Entornos {
      */
     public static double celsiusAFahrenheit(double celsius) {
         return (celsius * 9/5) + 32;
+    }
+
+    /**
+     * Convierte un texto a mayúsculas.
+     * @param texto El texto a convertir
+     * @return El texto convertido completamente a mayúsculas
+     */
+    public static String convertirAMayusculas(String texto) {
+        return texto.toUpperCase();
+    }
+
+    /**
+     * Comprueba si un texto contiene la letra 'a' (mayúscula o minúscula).
+     * @param oracion El texto en el que buscar la letra 'a'
+     * @return true si el texto contiene 'a' o 'A', false en caso contrario
+
+     */
+    public static boolean contieneLetraA(String oracion) {
+        return oracion.toLowerCase().contains("a");
     }
 }
