@@ -24,6 +24,11 @@ public class Entornos {
 
         double media = calcularPromedio3(8.5, 6.0, 9.0);
         System.out.println("La media es: " + media);
+
+        String nombre = "Sergio";
+        String apellidos = "Uriel";
+
+        System.out.println("El nombre completo: " + nombreCompleto(nombre, apellidos));
     }
 
     /**
@@ -68,5 +73,15 @@ public class Entornos {
      */
     public static double calcularPromedio3(double n1, double n2, double n3) {
         return (n1 + n2 + n3) / 3;
+    }
+
+    /**
+     *
+     * @param nombre
+     * @param apellidos
+     * @return nombre completo concatenado
+     */
+    public static String nombreCompleto (String nombre, String apellidos) {
+        return nombre + " " + apellidos;
     }
 }
