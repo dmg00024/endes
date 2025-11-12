@@ -43,9 +43,9 @@ public class Entornos {
         System.out.println("La suma de los primeros 10 números naturales es: " + suma10);
 
         // Bloque 2
-        System.out.println(saludoPersonalizado("Ander"));
-        System.out.println(aMayusculas("hola mundo"));
-        System.out.println(unirFrases("Hola", "qué tal"));
+        System.out.println(saludoPersonalizado("Geremi"));
+        System.out.println(aMayusculas("hola mundo,este es mi primera programacion"));
+        System.out.println(unirFrases("Hola", "Qué tal"));
         System.out.println("Letras: " + contarLetras("ordenador"));
         System.out.println("Contiene 'a': " + contieneA("ventana"));
 
