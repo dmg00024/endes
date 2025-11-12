@@ -5,7 +5,6 @@ package edu.daw.entornos;
  * - un método sin parámetros ni valor de retorno (saludar)
  * - métodos con parámetros y retorno (sumar, doble, etc.)
  * - métodos con tipos {@code double} para cálculos numéricos
- *
  * Esta clase contiene un método {@code main} para ejecutar ejemplos de uso.
  */
 public class Entornos {
@@ -72,6 +71,8 @@ public class Entornos {
         System.out.println("¡Hola! Este es mi primer programa en Java.");
     }
 
+    // Bloque 1
+
     /**
      * 1º Calcula la suma de dos números enteros.
      * @param a primer número
@@ -120,7 +121,7 @@ public class Entornos {
     }
 
 
-    // Bloque 2 – Texto y cadenas
+    // Bloque 2
 
 
     /**
@@ -169,7 +170,7 @@ public class Entornos {
         return text.contains("a");
     }
 
-    // Bloque 3 – Condicionales
+    // Bloque 3
 
     /**
      * 11º Devuelve el mayor de dos números.
@@ -225,7 +226,7 @@ public class Entornos {
         return edad >= 18;
     }
 
-    // Bloque 4 – Bucles
+    // Bloque 4
 
     /**
      * 16º Suma todos los números del 1 al 100.
@@ -258,7 +259,7 @@ public class Entornos {
         palabra = palabra.toLowerCase();
         for (int i = 0; i < palabra.length(); i++) {
             char c = palabra.charAt(i);
-            if ("aeiou".indexOf(c) != -1) contador++;
+            if ("a e i o u".indexOf(c) != -1) contador++;
         }
         return contador;
     }
@@ -280,7 +281,7 @@ public class Entornos {
         for (int i = 3; i <= limite; i += 3) System.out.println(i);
     }
 
-    // Bloque 5 – Para avanzar...
+    // Bloque 5
 
     /**
      * 21º Generar un número aleatorio entre 1 y 10.
@@ -288,5 +289,51 @@ public class Entornos {
      */
     public static int numeroAleatorio() {
         return (int) (Math.random() * 10) + 1;
+    }
+
+    /**
+     * 22º Comprobar si un año es bisiesto.
+     * @param anio año a comprobar
+     * @return {@code true} si es bisiesto
+     */
+    public static boolean esBisiesto(int anio) {
+        return (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0);
+    }
+
+    /**
+     * 23º Mostrar el día de la semana según un número (1-7).
+     * @param dia número del día (1=Lunes, 7=Domingo)
+     * @return nombre del día de la semana
+     */
+    public static String diaDeLaSemana(int dia) {
+        switch (dia) {
+            case 1: return "Lunes";
+            case 2: return "Martes";
+            case 3: return "Miércoles";
+            case 4: return "Jueves";
+            case 5: return "Viernes";
+            case 6: return "Sábado";
+            case 7: return "Domingo";
+            default: return "Día inválido";
+        }
+    }
+
+    /**
+     * 24º Simular una tirada de dado (1-6).
+     * @return número aleatorio entre 1 y 6
+     */
+    public static int tirarDado() {
+        return (int) (Math.random() * 6) + 1;
+    }
+
+    /**
+     * 25º Calcular la media de tres números.
+     * @param n1 primer número
+     * @param n2 segundo número
+     * @param n3 tercer número
+     * @return la media aritmética
+     */
+    public static double calcularMedia(double n1, double n2, double n3) {
+        return (n1 + n2 + n3) / 3.0;
     }
 }
