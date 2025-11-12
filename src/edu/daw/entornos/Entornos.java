@@ -16,7 +16,7 @@ public class Entornos {
      */
     public static void main(String[] args) {
 
-        // Ejemplo 0: Saludo simple
+        // Ejemplo 0: Saludo simple.
         saludar();
 
         // 1️º Calcular la suma de dos números
@@ -43,24 +43,39 @@ public class Entornos {
         System.out.println("La suma de los primeros 10 números naturales es: " + suma10);
 
         // Bloque 2
+        // 6º Devuelve un saludo personalizado.
         System.out.println(saludoPersonalizado("Ander"));
+        // 7º Convierte un texto a mayúsculas.
         System.out.println(aMayusculas("hola mundo"));
+        // 8º Une dos frases en una sola.
         System.out.println(unirFrases("Hola", "qué tal"));
+        // 9º Cuenta cuántas letras tiene una palabra.
         System.out.println("Letras: " + contarLetras("ordenador"));
+        // 10º Comprueba si un texto contiene la letra 'a'.
         System.out.println("Contiene 'a': " + contieneA("ventana"));
 
         // Bloque 3
+        // 11º Devuelve el mayor de dos números.
         System.out.println("Mayor: " + mayorDeDos(70, 32));
+        // 12º Comprueba si un número es par.
         System.out.println("Par: " + esPar(7));
+        // 13º Indica si un número es positivo, negativo o cero.
         System.out.println(signoNumero(-8));
+        // 14º Convierte una nota numérica en calificación textual.
         System.out.println(calificacion(3));
+        // 15º Comprueba si una edad permite votar.
         System.out.println("Puede votar: " + puedeVotar(18));
 
         // Bloque 4
+        // 16º Suma todos los números del 1 al 100.
         System.out.println("Suma 1-100: " + sumarHasta100());
+        // 17º Calcula el factorial de un número.
         System.out.println("Factorial: " + factorial(5));
+        // 18º Cuenta cuántas vocales contiene una palabra.
         System.out.println("Vocales: " + contarVocales("mayonesa"));
+        // 19º Muestra un mensaje repetido N veces.
         repetirMensaje("Hola", 3);
+        // 20º Muestra los múltiplos de 3 hasta un número dado.
         mostrarMultiplosDeTres(36);
     }
 
