@@ -29,12 +29,6 @@ public class Entornos {
         System.out.println(resultadounir);
     }
 
-
-    /**
-     * @param a
-     * @param b
-     * @return
-     */
     public static int sumar(int a, int b){
         return  a + b;
     }
