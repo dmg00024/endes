@@ -73,7 +73,7 @@ public class Entornos {
     }
 
     /**
-     * 1º Calcula la suma de dos números enteros.
+     *1º Calcula la suma de dos números enteros.
      * @param a primer número
      * @param b segundo número
      * @return la suma de {@code a} y {@code b}
@@ -83,16 +83,16 @@ public class Entornos {
     }
 
     /**
-     * 2º Devuelve el doble de un número entero.
+     *2º Devuelve el doble de un número entero.
      * @param d número a duplicar
-     * @return el doble del número {@code d}
+     * @return el doble del número {@code n}
      */
     public static int doble(int d) {
         return d * 2;
     }
 
     /**
-     * 3º Calcula el área de un cuadrado.
+     *3º Calcula el área de un cuadrado.
      * @param lado longitud del lado
      * @return área del cuadrado
      */
@@ -101,7 +101,7 @@ public class Entornos {
     }
 
     /**
-     * 4º Convierte grados Celsius a Fahrenheit.
+     *4º Convierte grados Celsius a Fahrenheit.
      * @param celsius grados Celsius
      * @return grados Fahrenheit
      */
@@ -110,7 +110,7 @@ public class Entornos {
     }
 
     /**
-     * 5º Suma los primeros 10 números naturales.
+     *5º Suma los primeros 10 números naturales.
      * @return suma total
      */
     public static int sumaPrimeros10() {
@@ -124,7 +124,7 @@ public class Entornos {
 
 
     /**
-     * 6º Devuelve un saludo personalizado.
+     *6º Devuelve un saludo personalizado.
      * @param nombre nombre del usuario
      * @return saludo con el nombre
      */
@@ -133,7 +133,7 @@ public class Entornos {
     }
 
     /**
-     * 7º Convierte un texto a mayúsculas.
+     *7º Convierte un texto a mayúsculas.
      * @param texto texto original
      * @return texto en mayúscula
      */
@@ -142,7 +142,7 @@ public class Entornos {
     }
 
     /**
-     * 8º Une dos frases en una sola.
+     *8º Une dos frases en una sola.
      * @param f1 primera frase
      * @param f2 segunda frase
      * @return frases unidas con espacio
@@ -152,16 +152,16 @@ public class Entornos {
     }
 
     /**
-     * 9º Cuenta cuántas letras tiene una palabra.
+     *9º Cuenta cuántas letras tiene una palabra.
      * @param palabra palabra a analizar
-     * @return número de caracteres
+     * @return número de caracter
      */
     public static int contarLetras(String palabra) {
         return palabra.length();
     }
 
     /**
-     * 10º Comprueba si un texto contiene la letra 'a'.
+     *10º Comprueba si un texto contiene la letra 'a'.
      * @param text texto a analizar
      * @return {@code true} si contiene 'a'
      */
@@ -172,7 +172,7 @@ public class Entornos {
     // Bloque 3 – Condicionales
 
     /**
-     * 11º Devuelve el mayor de dos números.
+     *11º Devuelve el mayor de dos números.
      *
      * @param a primer número
      * @param b segundo número
@@ -183,7 +183,7 @@ public class Entornos {
     }
 
     /**
-     * 12º Comprueba si un número es par.
+     *12º Comprueba si un número es par.
      * @param n número a comprobar
      * @return {@code true} si es par
      */
@@ -192,7 +192,7 @@ public class Entornos {
     }
 
     /**
-     * 13º Indica si un número es positivo, negativo o cero.
+     *13º Indica si un número es positivo, negativo o cero.
      * @param n número a analizar
      * @return texto con el estado del número
      */
@@ -203,7 +203,7 @@ public class Entornos {
     }
 
     /**
-     * 14º Convierte una nota numérica en calificación textual.
+     *14º Convierte una nota numérica en calificación textual.
      * @param nota valor numérico 0-10
      * @return palabra correspondiente
      */
@@ -217,7 +217,7 @@ public class Entornos {
     }
 
     /**
-     * 15º Comprueba si una edad permite votar.
+     *15º Comprueba si una edad permite votar.
      * @param edad edad en años
      * @return {@code true} si es mayor de 18
      */
@@ -228,7 +228,7 @@ public class Entornos {
     // Bloque 4 – Bucles
 
     /**
-     * 16º Suma todos los números del 1 al 100.
+     *16º Suma todos los números del 1 al 100.
      * @return suma total
      */
     public static int sumarHasta100() {
@@ -238,7 +238,7 @@ public class Entornos {
     }
 
     /**
-     * 17º Calcula el factorial de un número.
+     *17º Calcula el factorial de un número.
      * @param e número entero
      * @return factorial del número
      */
@@ -249,7 +249,7 @@ public class Entornos {
     }
 
     /**
-     * 18º Cuenta cuántas vocales contiene una palabra.
+     *18º Cuenta cuántas vocales contiene una palabra.
      * @param palabra texto a analizar
      * @return número de vocales
      */
@@ -264,29 +264,25 @@ public class Entornos {
     }
 
     /**
-     * 19º Muestra un mensaje repetido N veces.
+     *19º Muestra un mensaje repetido N veces.
      * @param mensaje texto a repetir
      * @param veces número de repeticiones
      */
     public static void repetirMensaje(String mensaje, int veces) {
         for (int i = 0; i < veces; i++) System.out.println(mensaje);
     }
-
     /**
-     * 20º Muestra los múltiplos de 3 hasta un número dado.
+     *20º Muestra los múltiplos de 3 hasta un número dado.
      * @param limite valor máximo
      */
     public static void mostrarMultiplosDeTres(int limite) {
         for (int i = 3; i <= limite; i += 3) System.out.println(i);
-    }
 
-    // Bloque 5 – Para avanzar...
+        //Bloque 5 – Para avanzar...
 
-    /**
-     * 21º Generar un número aleatorio entre 1 y 10.
-     * @return número aleatorio entre 1 y 10
-     */
-    public static int numeroAleatorio() {
-        return (int) (Math.random() * 10) + 1;
+        /**
+         *21º Generar un número aleatorio entre 1 y 10.
+         * @param
+         */
     }
 }
