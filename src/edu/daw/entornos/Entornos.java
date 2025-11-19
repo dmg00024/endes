@@ -347,7 +347,6 @@ public class Entornos {
      * Comprueba si un texto contiene la letra 'a' (mayúscula o minúscula).
      * @param oracion El texto en el que buscar la letra 'a'
      * @return true si el texto contiene 'a' o 'A', false en caso contrario
-
      */
     public static boolean contieneLetraA(String oracion) {
         return oracion.toLowerCase().contains("a");
