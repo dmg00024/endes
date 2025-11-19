@@ -24,6 +24,10 @@ public class Entornos {
 
         double media = calcularPromedio3(8.5, 6.0, 9.0);
         System.out.println("La media es: " + media);
+
+        System.out.println("¿Es par 8?: " + esPar(8));
+
+        System.out.println("25 grados Celsius son " + celsiusAFahrenheit(25));
     }
 
     /**
@@ -69,4 +73,15 @@ public class Entornos {
     public static double calcularPromedio3(double n1, double n2, double n3) {
         return (n1 + n2 + n3) / 3;
     }
+}
+/** Operaciones numericas... */
+
+/** Determina si un numero es par... */
+public static boolean esPar(int n) {
+    return n % 2 == 0;
+}
+/** Celsius A Fahrenheit... */
+
+public static double celsiusAFahrenheit(double celsius) {
+    return (celsius * 9/5) + 32;
 }
