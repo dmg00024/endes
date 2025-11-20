@@ -18,12 +18,16 @@ public class Entornos {
      * @param args argumentos de línea de comandos (no se usan)
      */
     public static void main(String[] args) {
-
-        // Crear el objeto Scanner para leer datos desde la consola
-
         Scanner scanner = new Scanner(System.in);
 
-        //Funciones profesor.
+        /*
+          Sección: Funciones del profesor.
+          Aquí se ejecutan funciones de ejemplo proporcionadas por el profesor:
+          - Saludo genérico.
+          - Suma de dos enteros.
+          - Cálculo del promedio de tres números decimales.
+         */
+
 
         saludar();
 
@@ -33,7 +37,16 @@ public class Entornos {
         double media = calcularPromedio3(8.5, 6.0, 9.0);
         System.out.println("La media es: " + media);
 
-        //Funciones alumno.
+        /*
+          Sección: Funciones del alumno.
+          Ejemplos de funciones implementadas por el alumno:
+          - Obtener el doble de un número.
+          - Calcular el área de un cuadrado.
+          - Generar un saludo personalizado.
+          - Determinar si un número es par o impar.
+          - Calcular el factorial de un número.
+         */
+
 
         int doble_numero = ObtenerDoble(7);
         System.out.println("El doble de 7 es: " + doble_numero);
@@ -61,8 +74,20 @@ public class Entornos {
         String Factorial = calcularFactorial(3);
         System.out.println(Factorial);
 
-        // Solicitar el radio al usuario
+        /*
+          Sección: Entrada de datos del usuario.
+          Se solicita al usuario información para realizar cálculos:
+          - Radio de un círculo para calcular su área.
+          - Dos números para sumarlos.
+          - Un número base para sumar sus 9 consecutivos.
+          - Dos números para determinar el mayor.
+          - Edad para verificar si puede votar.
+          - Temperatura en Celsius para convertir a Fahrenheit.
+          - Texto para convertir a mayúsculas.
+          - Oración para verificar si contiene la letra 'a'.
+         */
 
+        // Solicitar radio del circulo a calcular su área al usuario
         System.out.print("Introduce el radio del círculo: ");
         double radio = scanner.nextDouble();
 
