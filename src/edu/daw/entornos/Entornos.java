@@ -359,8 +359,19 @@ public class Entornos {
 
             }
 
-            //Bloque 3
+            //Bloque 4
 
+            /**
+             * Se solicita un numero entero no negativo, para calcular su factorial mediante un bucle
+             * <p>
+             * El metodo valida la entrada almacenada en {@code numero3}:
+             * <ul>
+             *     <li>Si es negativo: mostrara un texto que diga erro</li>
+             *     <li>Si es 0: se mostrara que el factorial es 1</li>
+             *     <li>Si es positivo: realiza la multiplicacion acumulada en la variable {@code factorial}</li>
+             * </ul>
+             *</p>
+             */
             System.out.println("Calcular el Factorial de un Número");
 
             System.out.print("Introduce un número entero que no sea negativo: ");
@@ -385,6 +396,16 @@ public class Entornos {
             }
 
 
+            /**
+             * Solicita una frase para saber cuantas vocales, mediante un bulce  recorrera por la frase para saber eso
+             *
+             * <p>
+             *     El proceso convierte el texto original({@code textovocales}) en minuculas, y empieza a realizar el bucle
+             * </p>
+             *
+             *@param sc El objeto {@code Scanner} utilizado para la lectura de la línea completa.
+             */
+
             System.out.println("Cuantas vocales tiene la siguiente frase:");
 
             System.out.print("Introduce una palabra para saber cuantas vocales hay");
@@ -404,11 +425,21 @@ public class Entornos {
                 }
             }
 
-            // 5. Mostrar el resultado
             System.out.println("Resultado");
             System.out.println("Texto inicial:" + textovocales);
             System.out.println("El número total de vocales es: " + contVocales);
 
+
+            /**
+             * Solicita al usuario un texto y un numero, para saber cuantas veces repetir el texto
+             *
+             * <p>
+             *
+             *El metodo utiliza un bucleque va desde le 1 hasta el numero introducido por el usuario {@code nVeces}
+             * </p>
+             *
+             * @param sc El objeto {@code Scanner} utilizado para leer tanto la cadena de texto como el entero.
+             */
 
             System.out.println("Repetir un mensaje varias veces");
 
@@ -425,6 +456,18 @@ public class Entornos {
             }
 
 
+            /**
+             * Pide un numero limite (variable {@code X}, y muestra los divisibles entre 3 hasta el numero introducido
+             *
+             * <p>
+             * Muestra un encabezado utilizando la variable {@code limite} y luego itera desde 1 hasta {@code X},
+             * verificando la divisibilidad mediante el operador modulo ({@code i % 3 == 0})
+             *
+             * </p>
+             *
+             * @param sc     El objeto {@code Scanner} para leer la entrada del usuario.
+             *@param limite Variable numérica utilizada exclusivamente para mostrar el mensaje de cabecera.
+             */
             System.out.print("Introduce hasta que numero se mostraran multiplos de 3: ");
             int X = sc.nextInt();
 
@@ -436,8 +479,7 @@ public class Entornos {
                     System.out.print(i + " El numero es multiplo de 3");
                 }
             }
-
-            System.out.println();
+            //Bloque 5
 
 
             Random rand = new Random();
