@@ -112,7 +112,7 @@ public class Entornos {
 
         int sumaconsecutiva = Sumar10Siguientes(num);
 
-        //Devlvemos la suma al usuario.
+        //Devolvemos la suma al usuario.
 
         System.out.println("La suma de " + num + " y sus nueve consecutivos números es: " + sumaconsecutiva);
 
