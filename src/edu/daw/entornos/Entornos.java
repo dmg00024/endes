@@ -108,12 +108,33 @@ public class Entornos {
 
             //Bloque 2
 
+            /**
+             * Solicita un nombre para realizar un saludo personalizado
+             * <p>
+             *     Se utiliza el metodo {@code nextLine()} para capturar el nombre, permitiendo
+             *      leer la linea entera escrita por el usuario
+             * </p>
+             *
+             * @param sc El objeto {@code Scanner} necesario para la lectura de la entrada.
+             */
 
             System.out.println("Por favor, introduce tu nombre:");
 
             String nombre = sc.nextLine();
 
             System.out.println("¿Que tal?," + nombre);
+
+            /**
+             * Solicita una oracion/frase en minusculas para transformar su version en mayusculas
+             * y muestran el resultado en la pantalla
+             *
+             * <p>
+             *     * Se utiliza el metodo {@code toUpperCase()} de la clase {@code String}
+             *     para transformar las minusculas en mayusculas
+             * </p>
+             *
+             * @param sc El objeto {@code Scanner} utilizado para capturar la línea de texto completa.
+              */
 
 
             System.out.println("Introduce un texto para enseñar su version en mayúscula:");
@@ -125,6 +146,16 @@ public class Entornos {
 
             System.out.println("Resultado:");
             System.out.println("Texto en Mayúsculas: " + textoMayusculas);
+
+            /**
+             * Se solicitan 2 textos y luego las combina
+             *<p>
+             * El resultado final (guardado en la variable {@code fraseunica}) se muestra por
+             * consola, el resultado debe ser la combinacion de los 2 textos
+             *</p>
+             *
+             * @param sc El objeto {@code Scanner} utilizado para leer las líneas de texto completas.
+             */
 
             System.out.println("Introduce la primera frase:");
             String frase1 = sc.nextLine();
@@ -142,6 +173,17 @@ public class Entornos {
             System.out.println("Resultado");
             System.out.println("La cadena unida es: " + palabracontar);
 
+            /**
+             * Se solicita una frase/oracion para calcular la cantidad de caracteres que tiene
+             *
+             * <p>
+             *    El metodo obtiene la longitud de la cadena utilizando la función {@code .length()}
+             *    y muestra el texto dado y el numero de caracteres
+             * </p>
+             *
+             * @param sc El objeto {@code Scanner} utilizado para capturar la entrada de texto.
+             */
+
             System.out.println("Escriba una palabra para saber su cantidad de caracteres");
 
             String texto = sc.nextLine();
@@ -151,6 +193,16 @@ public class Entornos {
             System.out.println("Resultado");
             System.out.println("Texto introducido: " + texto);
             System.out.println("La longitud total es: " + longitud);
+
+            /**
+             * Muestra si en la frase/oracion anterior, da igual si es minuscula o mayuscula
+             * <p>
+             * El metodo convierte el texto a minúsculas mediante {@code toLowerCase()} y
+             * evalúa la presencia del caracter usando {@code contains("a")}.
+             * </p>
+             *
+             * @param texto La cadena de caracteres original que será analizada.
+             */
 
             System.out.println("Introduce una palabra para saber cuantas veces se repite la letra a");
 
