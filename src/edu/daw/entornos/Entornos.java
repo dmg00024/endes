@@ -1,8 +1,14 @@
 package edu.daw.entornos;
 
+import java.util.Random;
 import java.util.Scanner;
 
+
+
 public class Entornos {
+
+    static Random generador = new Random();
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -38,6 +44,7 @@ public class Entornos {
         System.out.println("El área del cuadrado es: " + area);
 
 
+        //Reconocen numeros decimales
         double fahrenheit;
         double celsius;
 
@@ -86,8 +93,7 @@ public class Entornos {
             String textoMayusculas = textoOriginal.toUpperCase();
 
             // 5. Imprimir los resultados
-            System.out.println("--- Resultado ---");
-            System.out.println("Texto Original: " + textoOriginal);
+            System.out.println("Resultado:");
             System.out.println("Texto en Mayúsculas: " + textoMayusculas);
 
             System.out.println("Introduce la primera frase:");
@@ -100,22 +106,22 @@ public class Entornos {
             // Opción 1: Usando el operador de concatenación (+)
             // -----------------------------------------------------------------
             // Se añade un espacio " " entre las dos frases para que no queden pegadas.
-            String resultadoConOperador = frase1 + " " + frase2;
+            String fraseunica = frase1 + frase2;
 
-            System.out.println("\n--- Resultado con Operador (+) ---");
-            System.out.println("La cadena unida es: " + resultadoConOperador);
+            System.out.println("Resultado:");
+            System.out.println("La cadena unida es: " + fraseunica);
 
             // -----------------------------------------------------------------
             // Opción 2: Usando el método .concat()
             // -----------------------------------------------------------------
             // El método .concat() solo une dos cadenas directamente, por lo que
             // debemos unir el espacio por separado.
-            String resultadoConMetodo = frase1.concat(" ").concat(frase2);
+            String palabracontar = frase1.concat(" ").concat(frase2);
 
-            System.out.println("\n--- Resultado con Método .concat() ---");
-            System.out.println("La cadena unida es: " + resultadoConMetodo);
+            System.out.println("Resultado con Método .concat()");
+            System.out.println("La cadena unida es: " + palabracontar);
 
-            System.out.println("Introduce una palabra o frase para contar sus caracteres:");
+            System.out.println("Escriba una palabra para saber su cantidad de caracteres");
 
             // La entrada se guarda en una variable String
             String texto = sc.nextLine();
@@ -125,11 +131,11 @@ public class Entornos {
             // -----------------------------------------------------------------
             int longitud = texto.length();
 
-            System.out.println("\n--- Resultado ---");
-            System.out.println("Texto introducido: \"" + texto + "\"");
+            System.out.println("Resultado");
+            System.out.println("Texto introducido: " + texto);
             System.out.println("La longitud total es: " + longitud);
 
-            System.out.println("Introduce una frase o palabra:");
+            System.out.println("Introduce una palabra para saber cuantas veces se repite la letra a");
 
 
             // -----------------------------------------------------------------
@@ -138,28 +144,28 @@ public class Entornos {
 
             // 1. Convertir el texto a minúsculas para asegurar que la búsqueda
             //    incluya tanto 'a' como 'A'.
-            String textoMinusculas = texto.toLowerCase();
+            String texto2 = texto.toLowerCase();
 
             // 2. Usar .contains() para verificar la presencia de la subcadena "a"
-            boolean contieneA = textoMinusculas.contains("a");
+            boolean contieneA = texto2.contains("a");
 
-            System.out.println("\n--- Resultado ---");
-            System.out.println("Texto analizado: \"" + texto + "\"");
+            System.out.println("Resultado");
+            System.out.println("Texto analizado:" + texto);
 
             if (contieneA) {
-                System.out.println("¡Sí! El texto SÍ contiene la letra 'a' o 'A'.");
+                System.out.println("El texto contiene la letra 'a' o 'A'");
             } else {
-                System.out.println("No. El texto NO contiene la letra 'a' ni 'A'.");
+                System.out.println(" El texto no contiene la letra 'a' ni 'A'");
             }
 
-            System.out.println("--- Determinar el Mayor de Dos Números ---");
+            System.out.println(" Determinar el Mayor de Dos Números");
 
             // 1. Pedir los números al usuario
-            System.out.print("Introduce el primer número (A): ");
-            double numA = sc.nextDouble();
+            System.out.print("Introduce el primer número: ");
+            double num01 = sc.nextDouble();
 
-            System.out.print("Introduce el segundo número (B): ");
-            double numB = sc.nextDouble();
+            System.out.print("Introduce el segundo número: ");
+            double num02 = sc.nextDouble();
 
             // -----------------------------------------------------------
             // Opción 1: Usando la Estructura Condicional if-else
@@ -167,12 +173,12 @@ public class Entornos {
 
             System.out.println("\n[Método 1: if-else]");
 
-            if (numA > numB) {
-                System.out.println("El mayor es A: " + numA);
-            } else if (numB > numA) {
-                System.out.println("El mayor es B: " + numB);
+            if (num01 > num02) {
+                System.out.println("El mayor: " + num01);
+            } else if (num02 > num01) {
+                System.out.println("El mayor: " + num02);
             } else {
-                System.out.println("Ambos números son iguales: " + numA);
+                System.out.println("Ambos números son iguales:" + num01);
             }
 
             // -----------------------------------------------------------
@@ -180,12 +186,8 @@ public class Entornos {
             // -----------------------------------------------------------
 
             // El método Math.max() devuelve directamente el valor más alto entre los dos.
-            double mayorConMath = Math.max(numA, numB);
 
-            System.out.println("\n[Método 2: Math.max()]");
-            System.out.println("El número mayor es: " + mayorConMath);
-
-            System.out.println("--- Comprobar Par o Impar ---");
+            System.out.println("Comprobar Par o Impar");
 
             // 1. Pedir el número
             System.out.print("Introduce un número entero: ");
@@ -197,13 +199,13 @@ public class Entornos {
             // La expresión (numero % 2) calcula el resto de dividir el número entre 2.
             if (numero % 2 == 0) {
                 // El resto es 0, por lo tanto, es par.
-                System.out.println("El número " + numero + " es PAR.");
+                System.out.println("El número " + numero + " es par.");
             } else {
                 // El resto es 1, por lo tanto, es impar.
-                System.out.println("El número " + numero + " es IMPAR.");
+                System.out.println("El número " + numero + " es impar.");
             }
 
-            System.out.println("--- Comprobar Positivo, Negativo o Cero ---");
+            System.out.println("Comprobar positivo, negativo o cero");
 
             // 1. Pedir el número
             System.out.print("Introduce un número: ");
@@ -214,52 +216,52 @@ public class Entornos {
             // 2. Aplicar la estructura condicional
             if (numero2 > 0) {
                 // Condición 1: Si el número es mayor que 0, es positivo.
-                System.out.println("El número " + numero2 +2  + "es POSITIVO.");
+                System.out.println("El número " + numero2 + "es positivo.");
             } else if (numero2 < 0) {
                 // Condición 2: Si el número no es positivo Y es menor que 0, es negativo.
-                System.out.println("El número " + numero2 + " es NEGATIVO.");
+                System.out.println("El número " + numero2 + " es negativo.");
             } else {
                 // Condición 3: Si no es mayor que 0 y no es menor que 0, debe ser 0.
-                System.out.println("El número es CERO.");
+                System.out.println("El número es cero.");
             }
 
-            System.out.println("--- Convertir Nota Numérica a Calificación Textual ---");
+            System.out.println("Introduce tu nota para saber si pasastes o no");
 
             // 1. Pedir la nota
-            System.out.print("Introduce la nota numérica (0.0 a 10.0): ");
+            System.out.print("Introduce la nota numérica (0 a 10): ");
             double nota = sc.nextDouble();
 
-            String calificacionTextual;
+            String calificacion;
 
             // 2. Aplicar la estructura condicional para determinar la calificación
             // Usamos la escala de calificación española (típicamente de 0 a 10)
 
             if (nota < 0 || nota > 10) {
                 // Comprobación de nota fuera de rango
-                calificacionTextual = "ERROR: Nota fuera del rango 0-10.";
+                calificacion = "Nota fuera del rango 0-10.";
             } else if (nota < 5) {
                 // Rango: [0.0 - 5.0)
-                calificacionTextual = "Insuficiente";
+                calificacion = "Insuficiente";
             } else if (nota < 6) {
                 // Rango: [5.0 - 6.0)
-                calificacionTextual = "Suficiente";
+                calificacion = "Suficiente";
             } else if (nota < 7) {
                 // Rango: [6.0 - 7.0)
-                calificacionTextual = "Bien";
+                calificacion = "Bien";
             } else if (nota < 9) {
                 // Rango: [7.0 - 9.0)
-                calificacionTextual = "Notable";
+                calificacion = "Notable";
             } else {
                 // Rango: [9.0 - 10.0] - El resto, incluyendo el 10
-                calificacionTextual = "Sobresaliente";
+                calificacion = "Sobresaliente";
             }
 
             // 3. Mostrar el resultado
-            System.out.println("\n--- Resultado ---");
-            System.out.println("Nota numérica: " + nota);
-            System.out.println("Calificación textual: " + calificacionTextual);
+            System.out.println("Resultado");
+            System.out.println("Nota:" + nota);
+            System.out.println("Resultado:" + calificacion);
 
-            System.out.println("--- Comprobar Edad para Votar (>= 18) ---");
+            System.out.println(" Comprobar si puedo votar");
 
             // 1. Pedir la edad
             System.out.print("Introduce tu edad: ");
@@ -270,135 +272,132 @@ public class Entornos {
             // 2. Aplicar la condición
             // La condición clave es: edad >= 18
             if (edad >= 18) {
-                System.out.println("Con " + edad + " años, ¡SÍ puedes votar!");
+                System.out.println("Con " + edad + " años, si puedes votar!");
             } else {
-             // Se ejecuta si la condición (edad >= 18) es falsa
-             int aniosFaltantes = 18 - edad;
-             System.out.println("Con " + edad + " años, todavía NO puedes votar.");
-             System.out.println("Te faltan " + aniosFaltantes + " años para alcanzar la mayoría de edad.");
-
-             System.out.println("--- Comprobar Edad para Votar (>= 18) ---");
-
-                // 1. Pedir la edadSystem.out.print("Introduce tu edad: ");
-
-                // Usamos 'int' ya que la edad suele ser un número entero
-              int edad1 = sc.nextInt();
-
-                // 2. Aplicar la condición
-                // La condición clave es: edad >= 18
-              if (edad1 >= 18) {
-                    System.out.println("Con " + edad + " años, ¡SÍ puedes votar!");
-              } else {
-                  // Se ejecuta si la condición (edad >= 18) es falsa
-                  int faltan = 18 - edad;
-                  System.out.println("Con " + edad + " años, todavía NO puedes votar.");
-                  System.out.println("Te faltan " + faltan + " años para alcanzar la mayoría de edad.");
+                // Se ejecuta si la condición (edad >= 18) es falsa
+                int aniosFaltantes = 18 - edad;
+                System.out.println("Con " + edad + " años, todavía  no puedes votar.");
 
 
-              }
-
-                System.out.println("--- Calcular el Factorial de un Número ---");
-
-                // 1. Pedir el número
-                System.out.print("Introduce un número entero no negativo: ");
-                int numero3 = sc.nextInt();
-
-                // Variable para almacenar el resultado del factorial.
-                // Se inicializa en 1, ya que el factorial de 0 es 1 y la multiplicación por 1 no afecta.
-                long factorial = 1;
-
-                // 2. Comprobación y cálculo
-                if (numero3 < 0) {
-                    System.out.println("El factorial no está definido para números negativos.");
-                } else if (numero3 == 0) {
-                    // Caso base: 0! = 1
-                    System.out.println("El factorial de 0 es: 1");
-                } else {
-                    // Caso general: Usar un bucle for para multiplicar
-                    for (i = 1; i <= numero3; i++) {
-                        // Multiplicamos el factorial acumulado por el contador (i) en cada paso
-                        factorial *= i; // Esto es equivalente a: factorial = factorial * i;
-                    }
-
-                    // 3. Mostrar el resultado
-                    System.out.println("El factorial de " + numero3 + " (" + numero3 + "!) es: " + factorial);
-                }
-
-
-                System.out.println("--- Contar Vocales en una Cadena ---");
-
-                        // 1. Pedir la frase
-                System.out.print("Introduce una palabra o frase: ");
-                String textovocales = sc.nextLine();
-
-                        // Variable para almacenar el contador de vocales
-                int contadorVocales = 0;
-
-                        // 2. Simplificar el texto para la comprobación
-                        // Convertimos todo a minúsculas para solo tener que comprobar (a, e, i, o, u)
-                String text = textovocales.toLowerCase();
-
-                        // 3. Recorrer el texto y contar
-                        // Usamos un bucle for para iterar sobre cada carácter del texto
-                for (i = 0; i < text.length(); i++) {
-                            // Obtenemos el carácter en la posición 'i'
-              char caracter = text.charAt(i);
-
-                            // 4. Comprobar si el carácter es una vocal
-                            if (caracter == 'a' || caracter == 'e' || caracter == 'i' || caracter == 'o' || caracter == 'u') {
-                                contadorVocales++;
-                            }
-                        }
-
-                        // 5. Mostrar el resultado
-                        System.out.println("\n--- Resultado ---");
-                        System.out.println("Texto analizado: \"" + textovocales + "\"");
-                        System.out.println("El número total de vocales es: " + contadorVocales);
-
-
-                System.out.println("--- Repetir Mensaje N Veces ---");
-
-                // 1. Pedir el mensaje
-                System.out.print("Introduce el mensaje que deseas repetir: ");
-                String mensaje = sc.nextLine();
-
-                // 2. Pedir el número de veces (N)
-                System.out.print("¿Cuántas veces (N) deseas repetirlo?: ");
-                int nVeces = sc.nextInt();
-
-                System.out.println("\n--- Mensaje Repetido (" + nVeces + " veces) ---");
-
-                // 3. Aplicar el bucle for
-                // El bucle empieza en i=1 y se ejecuta mientras i sea menor o igual a nVeces.
-                for (i = 1; i <= nVeces; i++) {
-                    System.out.println(i + ". " + mensaje);
-                }
-
-
-
-                // 1. Pedir el límite superior (N)
-                System.out.print("Introduce el número límite (N): ");
-                int N = sc.nextInt();
-
-                System.out.println("\n--- Múltiplos de 3 hasta " + limite + " ---");
-
-                // 2. Aplicar el bucle for
-                // Recorremos todos los números desde 1 hasta el límite
-                for (i = 1; i <=N ; i++) {
-                    // 3. Aplicar la condición de múltiplo (operador módulo %)
-                    // Si el resto de dividir 'i' entre 3 es 0, es un múltiplo de 3.
-                    if (i % 3 == 0) {
-                        System.out.print(i + " ");
-                    }
-                }
-
-                System.out.println(); // Salto de línea al finalizar
-
-                sc.close();
             }
+
+            System.out.println("Calcular el Factorial de un Número");
+
+            // 1. Pedir el número
+            System.out.print("Introduce un número entero que no sea negativo: ");
+            int numero3 = sc.nextInt();
+
+            // Variable para almacenar el resultado del factorial.
+            // Se inicializa en 1, ya que el factorial de 0 es 1 y la multiplicación por 1 no afecta.
+            long factorial = 1;
+
+            // 2. Comprobación y cálculo
+            if (numero3 < 0) {
+                System.out.println("El factorial no está definido para números negativos.");
+            } else if (numero3 == 0) {
+                // Caso base: 0! = 1
+                System.out.println("El factorial de 0 es: 1");
+            } else {
+                // Caso general: Usar un bucle for para multiplicar
+                for (i = 1; i <= numero3; i++) {
+                    // Multiplicamos el factorial acumulado por el contador (i) en cada paso
+                    factorial *= i; // Esto es equivalente a: factorial = factorial * i;
+                }
+
+                // 3. Mostrar el resultado
+                System.out.println("El factorial de " + numero3 + " (" + numero3 + "!) es: " + factorial);
+            }
+
+
+            System.out.println("Cuantas vocales tiene la siguiente frase:");
+
+            // 1. Pedir la frase
+            System.out.print("Introduce una palabra para saber cuantas vocales hay");
+            String textovocales = sc.nextLine();
+
+            // Variable para almacenar el contador de vocales
+            int contadorVocales = 0;
+
+            // 2. Simplificar el texto para la comprobación
+            // Convertimos todo a minúsculas para solo tener que comprobar (a, e, i, o, u)
+            String text = textovocales.toLowerCase();
+
+            // 3. Recorrer el texto y contar
+            // Usamos un bucle for para iterar sobre cada carácter del texto
+            for (i = 0; i < text.length(); i++) {
+                // Obtenemos el carácter en la posición 'i'
+                char caracter = text.charAt(i);
+
+                // 4. Comprobar si el carácter es una vocal
+                if (caracter == 'a' || caracter == 'e' || caracter == 'i' || caracter == 'o' || caracter == 'u') {
+                    contadorVocales++;
+                }
+            }
+
+            // 5. Mostrar el resultado
+            System.out.println("Resultado");
+            System.out.println("Texto inicial:" + textovocales);
+            System.out.println("El número total de vocales es: " + contadorVocales);
+
+
+            System.out.println("Repetir un mensaje varias veces");
+
+            // 1. Pedir el mensaje
+            System.out.print("Introduce el mensaje que deseas repetir: ");
+            String mensaje = sc.nextLine();
+
+            // 2. Pedir el número de veces (N)
+            System.out.print("¿Cuántas veces quieres repetirlo?: ");
+            int nVeces = sc.nextInt();
+
+            System.out.println("Mensaje Repetido (" + nVeces + " veces) ---");
+
+            // 3. Aplicar el bucle for
+            // El bucle empieza en i=1 y se ejecuta mientras i sea menor o igual a nVeces.
+            for (i = 1; i <= nVeces; i++) {
+                System.out.println(i + ". " + mensaje);
+            }
+
+
+            // 1. Pedir el límite superior (N)
+            System.out.print("Introduce el número límite: ");
+            int X = sc.nextInt();
+
+            System.out.println(" Múltiplos de 3 hasta " + limite);
+
+
+            for (i = 1; i <= X; i++) {
+                if (i % 3 == 0) {
+                    System.out.print(i + " El numero es multiplo de 3");
+                }
+            }
+
+            System.out.println(); // Salto de línea al finalizar
+
+
+            Random rand = new Random();
+
+            // nextInt(100) genera de 0 a 99, por eso sumamos 1
+            int numRandom = rand.nextInt(100) + 1;
+
+            System.out.println("El número es: " + numRandom);
+
+            System.out.print("Introduce un año: ");
+            int anio = sc.nextInt();
+
+            // Lógica completa
+            if ((anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0)) {
+                System.out.println(anio + " es bisiesto.");
+            } else {
+                System.out.println(anio + " no es bisiesto.");
+
+            }
+
+            sc.close();
         }
     }
-}
+    }
+
 
 
 
