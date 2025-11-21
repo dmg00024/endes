@@ -50,4 +50,10 @@ public class NombreDeLaClase {
                                                             System.out.println("Ambos números son iguales.");
                                                         }
                                                     }
+                                                    public class Saludo {
+
+                                                        public String obtenerSaludo(String nombre) {
+                                                            return "¡Hola, " + nombre + "! Bienvenido.";
+                                                        }
+                                                    }
                                                 }
