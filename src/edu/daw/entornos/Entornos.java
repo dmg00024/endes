@@ -88,6 +88,7 @@ public class Entornos {
          */
 
         // Solicitar radio del circulo a calcular su área al usuario
+
         System.out.print("Introduce el radio del círculo: ");
         double radio = scanner.nextDouble();
 
