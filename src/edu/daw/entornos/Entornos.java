@@ -191,6 +191,22 @@ public class Entornos {
             System.out.println("Su oración NO contiene la letra A");
         }
 
+        // Solicitamos al usuario el número a comprobar
+
+        System.out.println("Introduzca el número: ");
+        int numerin = scanner.nextInt();
+
+        //Llamamos a la función
+        String tipoNumero = tipodeNumero(numerin);
+
+        //Devolvemos al usuario según su número
+
+        if(numerin != 0){
+            System.out.println("El número" + numerin + "es un " + tipoNumero);
+        } else {
+            System.out.println(tipoNumero);
+        }
+
         // Cerrar el scanner
         scanner.close();
 
@@ -375,5 +391,20 @@ public class Entornos {
      */
     public static boolean contieneLetraA(String oracion) {
         return oracion.toLowerCase().contains("a");
+    }
+
+    /**
+     * Dice si el número introducido es positivo o negativo (o cero si es el caso)
+     * @param numerin es el número a analizar
+     * @return "número negativo" si {@code numerin < 0}, "número positivo" si {@code numerin > 1} o "Él cero no es ni negativo ni positivo" si {@code numerin == 0}
+     */
+    public static String tipodeNumero(int numerin) {
+        if (numerin < 0){
+            return "número negativo";
+        }else if (numerin > 0){
+            return "número positivo";
+        } else {
+            return "Él cero no es ni negativo ni positivo";
+        }
     }
 }
