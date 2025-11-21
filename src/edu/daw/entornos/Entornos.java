@@ -482,11 +482,33 @@ public class Entornos {
             //Bloque 5
 
 
+            /**
+             * Genero un numero entero aleatrio dentro de un rango especifico y lo muestra por consola
+             *
+             * <p>
+             *     Se pide un objeto de la clase {@code Random} para generar un valor
+             *     entre el 1 y 10 ({@code nextInt(100)}), se ve un (+1) para que el
+             *     resultado final sea entre 1 y 10
+             * </p>
+             */
+
             Random rand = new Random();
 
-            int numRandom = rand.nextInt(100) + 1;
+            int numRandom = rand.nextInt(10) + 1;
 
             System.out.println("El número es: " + numRandom);
+
+            /**
+             * Se solicita un año al usuario y para determinar si es bisiesto
+             *
+             * <p>
+             *     Si el numero es divisible entre 4 y no entre 100, o si es divisible entre 400,
+             *     se saca con la logica:
+             *     {@code (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0)}.
+             * </p>
+             *
+             * @param sc El objeto {@code Scanner} utilizado para leer el año por teclado.
+             */
 
             System.out.print("Introduce un año: ");
             int anio = sc.nextInt();
