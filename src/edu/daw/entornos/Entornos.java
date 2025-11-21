@@ -220,6 +220,16 @@ public class Entornos {
                 System.out.println(" El texto no contiene la letra 'a' ni 'A'");
             }
 
+            /**
+             * Muestra un texto y solicita 2 numeros y determina cual es mayor o si son iguales
+             *<p>
+             *  El metodo realiza una comparacion para saber si
+             *{@code num01} es mayor que {@code num02}, viceversa, o si son iguales.
+             * </p>
+             *
+             * @param sc El objeto {@code Scanner} necesario para la entrada de datos.
+             */
+
             System.out.println(" El numero Mayor de Dos Números");
 
             System.out.print("Introduce el primer número: ");
@@ -236,6 +246,17 @@ public class Entornos {
             } else {
                 System.out.println("Ambos números son iguales:" + num01);
             }
+
+            /**
+             * Muestra un texto y solicita un numero para saber si es par o impar
+             *
+             * <p>
+             *     El metodo determina si es divisible entre 2 con ({@code % 2 == 0},
+             *     despues de calcularlo ya sabe si es par o impar
+             * </p>
+             *
+             * @param sc El objeto {@code Scanner} utilizado para leer el número entero.
+              */
 
             System.out.println("¿Es Par o Impar?");
 
@@ -268,6 +289,18 @@ public class Entornos {
                 System.out.println("El número es cero.");
             }
 
+
+            /**
+             * Solicita un numero para saber si su valor,
+             * si fuera una nota, saber si es suficiente, insuficiente, bien, notable, sobresaliente
+             *
+             * <p>
+             *     Se usa el metodo del (if,else) y evalua la variable {@code numero2},
+             *     y determina a que texot pertenece ese valor
+             * </p>
+             *
+             * @param sc El objeto {@code Scanner} utilizado para capturar el número.
+             */
             System.out.println("Introduce tu nota para saber si pasastes o no");
 
             System.out.print("Introduce la nota numérica (0.0 a 10.00): ");
@@ -299,6 +332,17 @@ public class Entornos {
             System.out.println("Nota:" + nota);
             System.out.println("Resultado:" + calificacion);
 
+            /**
+             * Solicita la edad del usaurio, y asi determinara si es lo suficientemente mayor para votar
+             *
+             * <p>
+             *     Si es inferior a la permitida(>18), se calula al diferencia (variable {@code aniosFaltantes})
+             *     y mostrara un texto que diga que no puede votar
+             * </p>
+             *
+             *@param sc El objeto {@code Scanner} utilizado para leer la edad (entero) desde la consola.
+             */
+
             System.out.println(" Comprobar si puedo votar");
 
             System.out.print("Introduce tu edad: ");
@@ -314,6 +358,8 @@ public class Entornos {
 
 
             }
+
+            //Bloque 3
 
             System.out.println("Calcular el Factorial de un Número");
 
