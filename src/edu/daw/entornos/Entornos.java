@@ -203,7 +203,7 @@ public class Entornos {
         //Devolvemos al usuario según su número
 
         if(numerin != 0){
-            System.out.println("El número" + numerin + "es un " + tipoNumero);
+            System.out.println("El número " + numerin + " es un " + tipoNumero);
         } else {
             System.out.println(tipoNumero);
         }
