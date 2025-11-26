@@ -16,8 +16,7 @@ public class Entornos {
          * * calcula la suma aritmética y muestra el resultado en consola.
          * * <p>Este metodo asume que el objeto Scanner ya ha sido inicializado
          *  y está abierto para la lectura.</p>
-         *
-         ** @param sc El objeto {@code Scanner} utilizado para leer la entrada del usuario.
+         *.         ** @param sc El objeto {@code Scanner} utilizado para leer la entrada del usuario.
          *  * @throws java.util.InputMismatchException Si el usuario introduce un valor que no es un número.
          */
 
