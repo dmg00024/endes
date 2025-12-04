@@ -22,6 +22,7 @@ public static int sumar(int a, int b) {
 // 4. Verificar si un número es positivo
 public static boolean esPositivo(int numero) {
     return numero > 0;
+
     /**comprobamos si el numero es positivo*/
     System.out.println("¿Es positivo?: " + esPositivo(-3));
 }
@@ -41,7 +42,7 @@ public static int sumarPrimerosDiez() {
 
 }
 /**Llamamos la suma de los numeros naturales*/
-public static void main(String[] args) {
+public static int main(String[] args) {
     System.out.println("Suma primeros 10 naturales: " + sumarPrimerosDiez());
 }
 //7.Unir dos frases
@@ -49,9 +50,28 @@ public static String unirFrases(String frase1, String frase2) {
     return frase1 + " " + frase2;
 }
 /**unión de frases*/
-public static void main(String[] args) {
+public static int main(String[] args) {
     System.out.println("Frase unida: " + unirFrases("Hola Luismi,", "bienvenido a Java"));
 }
+
+//8.Suma del 1 hasta el 100
+//param numeros del 1-100
+// return suma numeros
+public static int sumarHasta100() {
+    int suma = 0;
+    for (int i = 1; i <= 100; i++) suma += i;
+    return suma;
+}
+//9. contar letras
+//param letras
+//return Conteo de letras
+public static int contarLetras(String palabra) { return palabra.length(); }
+//10. Un numero mayor>
+//param numeros
+//return x es mayor que
+public static int mayor(int a, int b) { return (a > b) ? a : b; }
+
+
 
 
 
