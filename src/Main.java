@@ -70,6 +70,26 @@ public static int contarLetras(String palabra) { return palabra.length(); }
 //param numeros
 //return x es mayor que
 public static int mayor(int a, int b) { return (a > b) ? a : b; }
+  // 11. Comprobar si un texto contiene la letra 'a'
+// param: texto (cadena a evaluar)
+// return: true si contiene 'a' o 'A', false en caso contrario
+
+  public static boolean contieneA(String texto) {
+      return texto.toLowerCase().contains("a");
+  }
+/**11.Comprobamos la letra "A"*/
+
+public static void main(String[] args) {
+    System.out.println(contieneA("perro")); // false
+    System.out.println(contieneA("Java"));  // true
+}
+//12. comprobar si puede votar
+// param: edad (años)
+// return: true si edad >= 18, false en caso contrario
+public static boolean puedeVotar(int edad) {
+    return edad >= 18;
+/**12.comprobamos si pòdemos votar*/
+    System.out.println(puedeVotar(20));
 
 
 
