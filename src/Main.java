@@ -90,7 +90,23 @@ public static boolean puedeVotar(int edad) {
     return edad >= 18;
 /**12.comprobamos si pòdemos votar*/
     System.out.println(puedeVotar(20));
-
+}
+//13.División de dos numeros
+// param: a (dividendo), b (divisor)
+// return: resultado de la división
+public static double dividir(double a, double b) {
+    if (b == 0) {
+        System.out.println("Error: división por cero");
+        return 0;
+    }
+    return a / b;
+}
+//14.Función de resta
+// param: a (minuendo), b (sustraendo)
+// return: resultado de la resta
+public static int restar(int a, int b) {
+    return a - b;
+}
 
 
 
