@@ -107,7 +107,12 @@ public static double dividir(double a, double b) {
 public static int restar(int a, int b) {
     return a - b;
 }
-
+//15.Calcular el cuadrado de un numero
+// param: n (número a elevar)
+// return: resultado de n al cuadrado
+public static int cuadrado(int n) {
+    return n * n;
+}
 
 
 
