@@ -44,6 +44,7 @@ public static int sumarPrimerosDiez() {
 /**Llamamos la suma de los numeros naturales*/
 public static int main(String[] args) {
     System.out.println("Suma primeros 10 naturales: " + sumarPrimerosDiez());
+    return 0;
 }
 //7.Unir dos frases
 public static String unirFrases(String frase1, String frase2) {
@@ -113,6 +114,10 @@ public static int restar(int a, int b) {
 public static int cuadrado(int n) {
     return n * n;
 }
+//16. Calcular el cubo de un numero
+// param: n (número a elevar)
+// return: resultado de n al cubo
+public static int cubo(int n) {
 
-
-
+    return n * n * n;
+}
