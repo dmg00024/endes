@@ -121,3 +121,15 @@ public static int cubo(int n) {
 
     return n * n * n;
 }
+// 17.  comprobar si un número es impar
+// param: n (número a comprobar)
+// return: true si es impar, false si es par
+public static boolean esImpar(int n) {
+    return n % 2 != 0;
+}
+//18. Comprobar si es par
+// param: n (número a comprobar)
+// return: true si es par, false si es impar
+public static boolean esPar(int n) {
+    return n % 2 == 0;
+}
