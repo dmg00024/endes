@@ -6,7 +6,7 @@ public static String saludar(String nombre) {
     return "Hola, " + nombre;
     /**saludamos al usuario*/
     System.out.println(saludar("luismi"));
-    }
+}
 // 2. Sumar
 public static int sumar(int a, int b) {
     return a + b;
@@ -14,10 +14,10 @@ public static int sumar(int a, int b) {
     System.out.println("Suma: " + sumar(5, 3));
 }
 // 3. Área de un cuadrado
-    public static int areaCuadrado(int lado) {
-        return lado * lado;
+public static int areaCuadrado(int lado) {
+    return lado * lado;
     /**calculamos el area de un cuadrado*/
-        System.out.println("Área cuadrado: " + areaCuadrado(4));
+    System.out.println("Área cuadrado: " + areaCuadrado(4));
 }
 // 4. Verificar si un número es positivo
 public static boolean esPositivo(int numero) {
@@ -71,13 +71,13 @@ public static int contarLetras(String palabra) { return palabra.length(); }
 //param numeros
 //return x es mayor que
 public static int mayor(int a, int b) { return (a > b) ? a : b; }
-  // 11. Comprobar si un texto contiene la letra 'a'
+// 11. Comprobar si un texto contiene la letra 'a'
 // param: texto (cadena a evaluar)
 // return: true si contiene 'a' o 'A', false en caso contrario
 
-  public static boolean contieneA(String texto) {
-      return texto.toLowerCase().contains("a");
-  }
+public static boolean contieneA(String texto) {
+    return texto.toLowerCase().contains("a");
+}
 /**11.Comprobamos la letra "A"*/
 
 public static void main(String[] args) {
