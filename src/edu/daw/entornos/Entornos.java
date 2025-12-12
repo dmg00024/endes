@@ -52,6 +52,9 @@ public class Entornos {
         //Bloque 3
         System.out.println("Mayor"+ mayordeDos(70,32));
         System.out.println("par"+ esPar(7));
+        System.out.println(signoNumero(-8)) ;
+        System.out.println(calificación(3));
+        System.out.println("Puede votar"+ puedeVotar(18));
     }
 
     /**
@@ -173,5 +176,35 @@ public class Entornos {
     public static boolean esPar (int n) {
         return n % 2 == 0;
     }
-
+    /**
+     * 13ª indica si es un numero positivo, negativo o cero.
+     * @param n número a analizar
+     * @return texto con el estado de número
+     */
+    public static String signoNumero (int n) {
+        if (n > 0) return "positivio";
+        if (n < 0) return "negativo";
+        return "cero";
+    }
+    /**
+     * 14ª convierte una nota numerica en calificacion textual.
+     * @param nota valor 0-10
+     * @return palabra correspondiente
+     */
+    public static String calificación(int nota) {
+        if (nota < 5 ) return "insuciente";
+        if (nota < 6 ) return "suficiente";
+        if (nota < 7 ) return "bien";
+        if (nota < 9 ) return "notable";
+        if (nota < 10 ) return "sobresaliente";
+        return "sobresaliente";
+    }
+    /**
+     * 15ª comprueba si una edad permite votar.
+     * @param edad en años
+     * @return {@code true} si es mayor de 18
+     */
+    public static boolean puedeVotar(int edad) {
+        return edad >= 18;
+    }
 }
