@@ -46,19 +46,19 @@ public class Entornos {
         System.out.println(saludoPersonalizado("Geremi alayo amaro"));
         System.out.println(aMayúsculas("hola mundo,este es mi primera programacion espero salga todo bien :C "));
         System.out.println(unirfrases("Hola", "Que tal"));
-        System.out.println("Letras" + contarletras("ordenar"));
-        System.out.println("contiene 'a'"+ contieneA("ventana"));
+        System.out.println("Letras:" + contarletras("ordenar"));
+        System.out.println("contiene 'a':"+ contieneA("ventana"));
 
         //Bloque 3
-        System.out.println("Mayor"+ mayordeDos(70,32));
-        System.out.println("par"+ esPar(7));
+        System.out.println("Mayor:"+ mayordeDos(70,32));
+        System.out.println("Par:"+ esPar(7));
         System.out.println(signoNumero(-8)) ;
         System.out.println(calificación(3));
-        System.out.println("Puede votar"+ puedeVotar(18));
+        System.out.println("Puede votar:"+ puedeVotar(18));
 
         //Bloque 4
-        System.out.println("suma 1-100"+ sumarHasta100());
-        System.out.println("factorial"+ factorial(5));
+        System.out.println("suma 1-100:"+ sumarHasta100());
+        System.out.println("factorial:"+ factorial(5));
     }
 
     /**
