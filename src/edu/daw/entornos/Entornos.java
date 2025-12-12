@@ -59,6 +59,8 @@ public class Entornos {
         //Bloque 4
         System.out.println("suma 1-100:"+ sumarHasta100());
         System.out.println("factorial:"+ factorial(5));
+        System.out.println("vocales:" + contarVocales("murcielago"));
+        repetirMensaje("vamoooooo",3);
     }
 
     /**
@@ -233,4 +235,27 @@ public class Entornos {
         for (int i = 1; i <= e; i++) Resultado *= i;
         return Resultado;
     }
+    /**
+     * 18ª cuenta cuántas vocales tiene una palabra.
+     * @param palabra testo analizar
+     * @return número de vocales
+     */
+    public static int contarVocales(String palabra) {
+        int contador = 0;
+        palabra = palabra.toLowerCase();
+        for (int i = 0; i < palabra.length(); i++) {
+            char C = palabra.charAt(i);
+            if ("a,e,i,o,u".indexOf(C) !=-1) contador++;
+        }
+        return contador;
+    }
+    /**
+     * 19ª Mostrar un mensaje repetido N veces.
+     * @param mensaje texto a repetir
+     * @param veces numero de repeticiones
+     */
+    public static void repetirMensaje(String mensaje, int veces) {
+        for (int i = 0; i < veces; i++) System.out.println(mensaje);
+    }
+
 }
