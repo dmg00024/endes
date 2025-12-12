@@ -47,6 +47,11 @@ public class Entornos {
         System.out.println(aMayúsculas("hola mundo,este es mi primera programacion espero salga todo bien :C "));
         System.out.println(unirfrases("Hola", "Que tal"));
         System.out.println("Letras" + contarletras("ordenar"));
+        System.out.println("contiene 'a'"+ contieneA("ventana"));
+
+        //Bloque 3
+        System.out.println("Mayor"+ mayordeDos(70,32));
+        System.out.println("par"+ esPar(7));
     }
 
     /**
@@ -140,4 +145,33 @@ public class Entornos {
     public static int contarletras(String palabra) {
         return palabra.length() ;
     }
+    /**
+     * 10ª comprueba si un texto tiene la letra 'a'
+     * @param texto a analizar
+     * @return {@code true} si contiene 'a'
+     */
+    public static boolean contieneA(String texto) {
+        return texto.contains("a") ;
+    }
+
+    // Bloque 3
+
+    /**
+     * 11ª Devuelve el mayor de dos Numeros.
+     * @param a primer numero
+     * @param b segundo numero
+     * @return el número mayor
+     */
+    public static int mayordeDos (int a, int b) {
+        return (a > b) ? a : b;
+    }
+    /**
+     * 12ª Comprueba si un numero es Par.
+     * @param n numero a comprobar
+     * @return {@code true} si es par
+     */
+    public static boolean esPar (int n) {
+        return n % 2 == 0;
+    }
+
 }
