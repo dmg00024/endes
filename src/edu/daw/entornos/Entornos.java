@@ -55,6 +55,10 @@ public class Entornos {
         System.out.println(signoNumero(-8)) ;
         System.out.println(calificación(3));
         System.out.println("Puede votar"+ puedeVotar(18));
+
+        //Bloque 4
+        System.out.println("suma 1-100"+ sumarHasta100());
+        System.out.println("factorial"+ factorial(5));
     }
 
     /**
@@ -206,5 +210,27 @@ public class Entornos {
      */
     public static boolean puedeVotar(int edad) {
         return edad >= 18;
+    }
+
+    // Bloque 4
+
+    /**
+     * 16ª suma todos los numeros del 1 al 100.
+     * @return suma total
+     */
+    public static int sumarHasta100() {
+        int suma = 0;
+        for (int i = 1; i <= 100; i++) suma += i;
+        return suma;
+    }
+    /**
+     * 17ª Calcula el factorial de un número.
+     * @param e número entero
+     * @return factorial del número
+     */
+    public static int factorial(int e) {
+        int Resultado = 1;
+        for (int i = 1; i <= e; i++) Resultado *= i;
+        return Resultado;
     }
 }
